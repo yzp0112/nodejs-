@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //因为路由地址是由上往下进行寻址的
-//如果我的public中存在index.html 
+//如果我的public中存在index.html
 //我的路由默认会直接打开此文件
 //把某一个文件夹映射为服务器静态文件目录,此目录中的内容可以直接访问
 //此文件夹下面一般存放静态资源文件(静态html、图片、css、客户端js等等)
@@ -71,7 +71,7 @@ app.all('/admin/*',(req,res,next)=>{
 })
 
 /****
- * 在访问此路由地址的时候 会首先经过上面一个 
+ * 在访问此路由地址的时候 会首先经过上面一个
  * app.all('/admin/*' ) 这个方法的处理
  */
 app.get('/admin/main',(req,res)=>{
@@ -88,6 +88,6 @@ app.use('/tom/jerry',require('./routes/first'))
 app.use('/admin/animal',require('./routes/first'))
 
 
-app.listen(3000,function(){
+app.listen(8080,function(){
     console.log('服务器运行中.....')
 })
